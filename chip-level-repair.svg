@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#0b0f14"/>
+  <!-- IC chip -->
+  <rect x="120" y="160" width="220" height="120" rx="3" fill="#11161d" stroke="#232c38" stroke-width="2"/>
+  <g fill="#0f0f14" stroke="#d3dae2" stroke-width="1">
+    <rect x="120" y="165" width="6" height="110"/>
+    <rect x="132" y="165" width="6" height="110"/>
+    <rect x="234" y="165" width="6" height="110"/>
+    <rect x="246" y="165" width="6" height="110"/>
+  </g>
+  <!-- top pin rows -->
+  <g fill="#d3dae2">
+    <rect x="126" y="158" width="5" height="8"/>
+    <rect x="144" y="158" width="5" height="8"/>
+    <rect x="162" y="158" width="5" height="8"/>
+    <rect x="180" y="158" width="5" height="8"/>
+    <rect x="198" y="158" width="5" height="8"/>
+    <rect x="216" y="158" width="5" height="8"/>
+    <rect x="234" y="158" width="5" height="8"/>
+  </g>
+  <g fill="#d3dae2">
+    <rect x="126" y="278" width="5" height="8"/>
+    <rect x="144" y="278" width="5" height="8"/>
+    <rect x="162" y="278" width="5" height="8"/>
+    <rect x="180" y="278" width="5" height="8"/>
+    <rect x="198" y="278" width="5" height="8"/>
+    <rect x="216" y="278" width="5" height="8"/>
+    <rect x="234" y="278" width="5" height="8"/>
+  </g>
+  <!-- internal die & bond wires -->
+  <rect x="190" y="200" width="60" height="40" rx="1" fill="#f97316"/>
+  <line x1="160" y1="220" x2="190" y2="220" stroke="#d3dae2" stroke-width="1"/>
+  <line x1="250" y1="220" x2="280" y2="205" stroke="#d3dae2" stroke-width="1"/>
+  <!-- magnifier -->
+  <circle cx="520" cy="220" r="90" fill="none" stroke="#d3dae2" stroke-width="3"/>
+  <line x1="590" y1="290" x2="660" y2="370" stroke="#d3dae2" stroke-width="3" stroke-linecap="round"/>
+  <!-- detail dot highlighting -->
+  <circle cx="230" cy="220" r="5" fill="#f97316"/>
+  <text x="400" y="460" font-family="Poppins,Arial,sans-serif" font-size="26" fill="#f97316" text-anchor="middle">Chip-Level Repair</text>
+</svg>

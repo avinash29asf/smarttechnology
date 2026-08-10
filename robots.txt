@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Smart Technology — Laptop & Desktop Repair | Chip-Level Motherboard Repair
+# Replace the placeholder host below with your live website URL.
+Sitemap: https://www.smarttechnology.example.com/sitemap.xml
