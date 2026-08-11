@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Repair Services | Smart Technology â€” Laptop, Desktop, Chip-Level & Motherboard Repair</title>
-  <meta name="description" content="Explore Smart Technology repair services: laptop repair, desktop repair, chip-level repair, motherboard repair, laptop upgrades, power & charging repair, display repair, BIOS repair and data backup & recovery.">
+  
   <meta name="keywords" content="laptop repair services, desktop repair services, chip level repair, motherboard repair, bios repair, data recovery Thergaon, laptop upgrades Pune">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0b0f14">
@@ -69,6 +69,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -1446,202 +1447,528 @@ select {
   transform: translateY(0);
 }
 
+
 /* ==========================================================================
-   RESPONSIVE â€” Desktop / Laptop / Tablet / Mobile
+   RESPONSIVE — Desktop / Laptop / Tablet / Mobile
    ========================================================================== */
 
-@media (max-width: 1060px) {
-  .feature-grid,
-  .services-grid,
-  .choose-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .feature-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (min-width: 1200px) {
+  .container { max-width: 1200px; padding: 0 32px; }
+  .feature-grid { grid-template-columns: repeat(4, 1fr); }
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-strip { grid-template-columns: repeat(4, 1fr); }
+  .hero h1 { font-size: clamp(2.4rem, 4.5vw, 3.8rem); }
+  .hero-text { font-size: clamp(1.05rem, 1.4vw, 1.2rem); }
+  .section-head h2 { font-size: clamp(1.9rem, 2.8vw, 2.6rem); }
+  .section { padding: 100px 0; }
 }
 
-@media (max-width: 920px) {
-  /* Mobile navigation */
-  .nav-toggle {
-    display: flex;
-  }
+@media (max-width: 1199px) {
+  .container { max-width: 100%; padding: 0 28px; }
+  .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .services-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .feature-strip { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hero { padding: calc(var(--header-h) + 50px) 0 60px; }
+  .hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); }
+  .section { padding: 80px 0; }
+  .section-head { margin-bottom: 44px; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .choose-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .stats-grid { gap: 24px; }
+}
 
+@media (max-width: 991px) {
+  .container { padding: 0 24px; }
+  .nav-toggle { display: flex; }
   .main-nav {
-    position: fixed;
-    top: var(--header-h);
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    background: rgba(7, 9, 13, 0.99);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 18px 24px 26px;
-    transform: translateY(-130%);
-    opacity: 0;
-    visibility: hidden;
+    position: fixed; top: var(--header-h); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 8px;
+    background: rgba(7,9,13,0.98); border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 20px 24px 28px; transform: translateY(-130%); opacity: 0; visibility: hidden;
     transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-    max-height: calc(100vh - var(--header-h));
-    overflow-y: auto;
-    box-shadow: 0 24px 44px rgba(0, 0, 0, 0.4);
+    max-height: calc(100vh - var(--header-h)); overflow-y: auto;
+    box-shadow: 0 24px 44px rgba(0,0,0,0.4); z-index: 999;
   }
-
-  .main-nav.open {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-  }
-
-  .main-nav ul a {
-    padding: 13px 16px;
-    font-size: 1rem;
-  }
-
-  .main-nav ul a.active {
-    background: rgba(249, 115, 22, 0.14);
-  }
-
-  .header-call {
-    margin-top: 10px;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .about-split {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .contact-split {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
+  .main-nav.open { transform: translateY(0); opacity: 1; visibility: visible; }
+  .main-nav ul { flex-direction: column; align-items: stretch; gap: 4px; }
+  .main-nav ul a { padding: 14px 16px; font-size: 1rem; border-radius: 10px; }
+  .main-nav ul a.active { background: rgba(249,115,22,0.14); }
+  .header-call { margin-top: 12px; justify-content: center; width: 100%; }
+  .hero { padding: calc(var(--header-h) + 40px) 0 50px; min-height: auto; }
+  .hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+  .hero-text { font-size: 1rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .feature-grid, .services-grid, .choose-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .feature-card, .service-card { padding: 28px 24px; }
+  .feature-icon { width: 50px; height: 50px; }
+  .feature-icon svg { width: 26px; height: 26px; }
+  .feature-card h3, .service-card h3 { font-size: 1.1rem; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .step-card { padding: 30px 22px 26px; }
+  .step-num::before { width: 54px; height: 54px; font-size: 1.2rem; }
+  .about-split { grid-template-columns: 1fr; gap: 36px; }
+  .about-media img { height: 320px; }
+  .about-tick-list { grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .gallery-figure img { height: 200px; }
+  .contact-split { grid-template-columns: 1fr; gap: 30px; }
+  .contact-info-card, .contact-form-card { padding: 32px 28px; }
+  .contact-map iframe { height: 320px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-about { grid-column: 1 / -1; }
+  .section { padding: 72px 0; }
+  .section-head { margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+  .cta-band { padding: 60px 0; }
+  .cta-band h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+  .float-btn { width: 50px; height: 50px; }
+  .float-btn svg { width: 22px; height: 22px; }
+  .whatsapp-float { right: 20px; bottom: 20px; }
+  .call-float { right: 78px; bottom: 20px; }
+  .back-top { right: 20px; bottom: 82px; width: 42px; height: 42px; }
 }
 
-@media (max-width: 720px) {
-  .section {
-    padding: 64px 0;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .gallery-figure img {
-    height: 190px;
-  }
-
-  .about-media img {
-    height: 300px;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 767px) {
+  .container { padding: 0 20px; }
+  .header-inner { height: 68px; }
+  :root { --header-h: 68px; }
+  .brand-icon { width: 40px; height: 40px; border-radius: 10px; }
+  .brand-icon svg { width: 22px; height: 22px; }
+  .brand-name { font-size: 1.15rem; }
+  .hero { padding: calc(var(--header-h) + 30px) 0 40px; text-align: center; }
+  .hero-badge { font-size: 12px; padding: 8px 14px; }
+  .hero h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); letter-spacing: -0.5px; }
+  .hero-text { font-size: 0.98rem; margin-bottom: 28px; }
+  .hero-actions { gap: 12px; margin-bottom: 32px; }
+  .hero-points { gap: 10px 16px; }
+  .hero-points li { font-size: 0.9rem; }
+  .section { padding: 60px 0; }
+  .section-head { margin-bottom: 32px; }
+  .section-head h2 { font-size: clamp(1.4rem, 5vw, 1.9rem); }
+  .section-head p { font-size: 0.95rem; }
+  .eyebrow { font-size: 11px; padding: 6px 14px; }
+  .stats-strip { padding: 36px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .stat-value { font-size: clamp(1.5rem, 4vw, 2rem); }
+  .stat-label { font-size: 0.85rem; }
+  .feature-grid, .services-grid, .choose-grid, .process-grid, .feature-strip { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .feature-card, .service-card, .choose-item, .step-card, .strip-item { padding: 24px 20px; }
+  .feature-card h3, .service-card h3, .choose-item h3, .step-card h3, .strip-item h3 { font-size: 1.05rem; }
+  .feature-card p, .service-card > p, .choose-item p, .step-card p, .strip-item p { font-size: 0.9rem; }
+  .feature-icon { width: 46px; height: 46px; margin-bottom: 16px; }
+  .feature-icon svg { width: 24px; height: 24px; }
+  .step-num::before { width: 48px; height: 48px; font-size: 1.1rem; margin-bottom: 16px; }
+  .btn { padding: 12px 24px; font-size: 0.95rem; }
+  .btn-lg { padding: 14px 30px; font-size: 1rem; }
+  .btn svg { width: 18px; height: 18px; }
+  .about-media img { height: 280px; }
+  .about-badge { left: 14px; bottom: 14px; padding: 10px 16px; }
+  .about-badge strong { font-size: 1.1rem; }
+  .about-content h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); }
+  .about-tick-list { grid-template-columns: 1fr; gap: 8px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .gallery-figure img { height: 180px; }
+  .gallery-cap { padding: 36px 14px 12px; font-size: 0.9rem; }
+  .faq-q { padding: 16px 20px; font-size: 0.98rem; }
+  .faq-a-inner { padding: 0 20px 18px; font-size: 0.92rem; }
+  .contact-info-card, .contact-form-card { padding: 28px 22px; }
+  .contact-info-card h3, .contact-form-card h3 { font-size: 1.25rem; }
+  .form-group input, .form-group select, .form-group textarea { padding: 12px 14px; font-size: 0.95rem; }
+  .contact-map iframe { height: 280px; }
+  .site-footer { padding: 50px 0 0; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-about { grid-column: 1 / -1; }
+  .footer-brand-name { font-size: 1.2rem; }
+  .footer-col h4 { font-size: 1rem; margin-bottom: 16px; }
+  .footer-col ul a { font-size: 0.9rem; }
+  .footer-contact li { font-size: 0.88rem; }
+  .footer-bottom { padding: 18px 0; font-size: 0.82rem; }
+  .cta-band { padding: 50px 0; }
+  .cta-band h2 { font-size: clamp(1.3rem, 4vw, 1.8rem); }
+  .cta-band p { font-size: 0.95rem; }
+  .page-hero { padding: calc(var(--header-h) + 50px) 0 50px; }
+  .page-hero h1 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); }
+  .page-hero p { font-size: 0.98rem; }
+  .breadcrumb { font-size: 0.82rem; }
+  .float-btn { width: 48px; height: 48px; }
+  .float-btn svg { width: 20px; height: 20px; }
+  .whatsapp-float { right: 18px; bottom: 18px; }
+  .call-float { right: 72px; bottom: 18px; }
+  .back-top { right: 18px; bottom: 76px; width: 40px; height: 40px; }
 }
 
-@media (max-width: 540px) {
-  .feature-grid,
-  .services-grid,
-  .choose-grid,
-  .process-grid,
-  .feature-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-figure img {
-    height: 230px;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .about-tick-list {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info-card,
-  .contact-form-card {
-    padding: 30px 22px;
-  }
-
-  .brand-name {
-    font-size: 1.12rem;
-  }
-
-  .hero h1 {
-    letter-spacing: -0.5px;
-  }
+@media (max-width: 575px) {
+  .container { padding: 0 16px; }
+  .header-inner { height: 62px; gap: 12px; }
+  :root { --header-h: 62px; }
+  .brand-icon { width: 36px; height: 36px; border-radius: 8px; }
+  .brand-icon svg { width: 20px; height: 20px; }
+  .brand-name { font-size: 1.05rem; }
+  .nav-toggle { width: 40px; height: 40px; padding: 8px; }
+  .nav-toggle span { height: 2px; }
+  .hero { padding: calc(var(--header-h) + 24px) 0 36px; text-align: center; }
+  .hero-badge { font-size: 11px; padding: 6px 12px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(1.4rem, 7vw, 1.9rem); letter-spacing: -0.3px; margin-bottom: 16px; }
+  .hero-text { font-size: 0.92rem; margin-bottom: 24px; }
+  .hero-actions { flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .hero-actions .btn { width: 100%; padding: 14px 20px; font-size: 0.95rem; }
+  .hero-points { flex-direction: column; align-items: center; gap: 8px; }
+  .hero-points li { font-size: 0.85rem; }
+  .stats-strip { padding: 30px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .stat-value { font-size: clamp(1.3rem, 5vw, 1.7rem); }
+  .stat-label { font-size: 0.8rem; }
+  .feature-grid, .services-grid, .choose-grid, .process-grid, .feature-strip { grid-template-columns: 1fr; gap: 14px; }
+  .feature-card, .service-card, .choose-item, .step-card, .strip-item { padding: 22px 18px; }
+  .feature-card h3, .service-card h3, .choose-item h3, .step-card h3, .strip-item h3 { font-size: 1.02rem; }
+  .feature-card p, .service-card > p, .choose-item p, .step-card p, .strip-item p { font-size: 0.88rem; }
+  .feature-icon { width: 42px; height: 42px; margin-bottom: 14px; }
+  .feature-icon svg { width: 22px; height: 22px; }
+  .step-num::before { width: 44px; height: 44px; font-size: 1rem; margin-bottom: 14px; }
+  .btn { padding: 12px 22px; font-size: 0.92rem; }
+  .btn-lg { padding: 13px 26px; font-size: 0.95rem; }
+  .btn svg { width: 17px; height: 17px; }
+  .section { padding: 52px 0; }
+  .section-head { margin-bottom: 28px; }
+  .section-head h2 { font-size: clamp(1.3rem, 5.5vw, 1.7rem); }
+  .section-head p { font-size: 0.9rem; }
+  .eyebrow { font-size: 10px; padding: 5px 12px; letter-spacing: 1.5px; }
+  .about-media img { height: 240px; }
+  .about-badge { left: 10px; bottom: 10px; padding: 8px 14px; }
+  .about-badge strong { font-size: 1rem; }
+  .about-badge span { font-size: 0.78rem; }
+  .about-content h2 { font-size: clamp(1.3rem, 5vw, 1.7rem); }
+  .about-content p { font-size: 0.92rem; }
+  .about-tick-list { grid-template-columns: 1fr; gap: 8px; }
+  .about-tick-list li { font-size: 0.9rem; }
+  .about-tick-list svg { width: 17px; height: 17px; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 14px; }
+  .gallery-figure img { height: 220px; }
+  .gallery-cap { padding: 40px 16px 14px; font-size: 0.92rem; }
+  .gallery-lightbox img { max-width: 95vw; max-height: 75vh; }
+  .lightbox-close { top: 14px; right: 14px; width: 40px; height: 40px; font-size: 1.3rem; }
+  .lightbox-cap { bottom: 18px; font-size: 0.9rem; }
+  .faq-wrap { max-width: 100%; }
+  .faq-item { margin-bottom: 12px; }
+  .faq-q { padding: 16px 18px; font-size: 0.95rem; }
+  .faq-q .faq-icon { width: 26px; height: 26px; font-size: 1.1rem; }
+  .faq-a-inner { padding: 0 18px 16px; font-size: 0.9rem; }
+  .contact-info-card, .contact-form-card { padding: 26px 20px; }
+  .contact-info-card h3, .contact-form-card h3 { font-size: 1.2rem; }
+  .contact-info-card > p, .contact-form-card > p { font-size: 0.9rem; margin-bottom: 22px; }
+  .contact-item { gap: 12px; margin-bottom: 20px; }
+  .contact-item .ci-icon { width: 42px; height: 42px; }
+  .contact-item .ci-icon svg { width: 20px; height: 20px; }
+  .contact-item .ci-label { font-size: 0.75rem; }
+  .contact-item .ci-value { font-size: 0.92rem; }
+  .form-grid { grid-template-columns: 1fr; gap: 14px; }
+  .form-group input, .form-group select, .form-group textarea { padding: 12px 14px; font-size: 0.95rem; }
+  .form-group textarea { min-height: 120px; }
+  .contact-map iframe { height: 260px; }
+  .site-footer { padding: 44px 0 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-about { grid-column: auto; }
+  .footer-brand { margin-bottom: 14px; }
+  .footer-tagline { font-size: 0.78rem; margin-bottom: 12px; }
+  .footer-about p { font-size: 0.88rem; max-width: 100%; }
+  .footer-col h4 { font-size: 1rem; margin-bottom: 14px; }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col ul a { font-size: 0.88rem; }
+  .footer-contact li { font-size: 0.85rem; margin-bottom: 12px; }
+  .footer-contact svg { width: 18px; height: 18px; }
+  .footer-bottom { padding: 16px 0; font-size: 0.78rem; }
+  .cta-band { padding: 44px 0; }
+  .cta-band h2 { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+  .cta-band p { font-size: 0.9rem; margin-bottom: 24px; }
+  .page-hero { padding: calc(var(--header-h) + 40px) 0 40px; }
+  .page-hero h1 { font-size: clamp(1.4rem, 5.5vw, 1.9rem); }
+  .page-hero p { font-size: 0.92rem; }
+  .breadcrumb { font-size: 0.8rem; margin-bottom: 14px; }
+  .float-btn { width: 44px; height: 44px; }
+  .float-btn svg { width: 18px; height: 18px; }
+  .whatsapp-float { right: 14px; bottom: 14px; }
+  .call-float { right: 66px; bottom: 14px; }
+  .back-top { right: 14px; bottom: 68px; width: 38px; height: 38px; }
 }
 
-@media (max-width: 400px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .whatsapp-float {
-    right: 16px;
-    bottom: 16px;
-  }
-
-  .call-float {
-    right: 84px;
-    bottom: 16px;
-  }
-
-  .back-top {
-    right: 16px;
-    bottom: 86px;
-  }
+@media (max-width: 399px) {
+  .container { padding: 0 14px; }
+  .header-inner { height: 58px; gap: 8px; }
+  :root { --header-h: 58px; }
+  .brand-name { font-size: 0.95rem; }
+  .nav-toggle { width: 36px; height: 36px; padding: 6px; }
+  .hero { padding: calc(var(--header-h) + 20px) 0 30px; }
+  .hero h1 { font-size: 1.3rem; }
+  .hero-text { font-size: 0.88rem; }
+  .hero-actions .btn { padding: 12px 18px; font-size: 0.88rem; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat-value { font-size: 1.2rem; }
+  .section { padding: 44px 0; }
+  .section-head { margin-bottom: 24px; }
+  .section-head h2 { font-size: 1.25rem; }
+  .feature-card, .service-card, .choose-item, .step-card, .strip-item { padding: 20px 16px; }
+  .feature-card h3, .service-card h3, .choose-item h3, .step-card h3, .strip-item h3 { font-size: 0.98rem; }
+  .gallery-figure img { height: 180px; }
+  .contact-info-card, .contact-form-card { padding: 22px 16px; }
+  .whatsapp-float { right: 10px; bottom: 10px; }
+  .call-float { right: 60px; bottom: 10px; }
+  .back-top { right: 10px; bottom: 60px; width: 34px; height: 34px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+/* GEO educational headings */.choose-compare { font-size: 1.35rem; font-weight: 600; color: var(--black); margin: 34px 0 8px; letter-spacing: -0.3px; }.choose-compare + p { color: var(--gray-700); font-size: 1rem; max-width: 860px; }.feature-strip { margin-top: 28px; }
+
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Smart Technology repair services in Thergaon, Pune: laptop repair, desktop repair, chip-level repair, motherboard repair, BIOS repair, charging circuit repair, no display repair, dead laptop repair and SSD and RAM upgrades.">
+<link rel="canonical" href="https://avinash29asf.github.io/smarttechnology/services.html">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Thergaon, Pimpri-Chinchwad, Maharashtra">
+<meta name="geo.position" content="18.6165;73.7630">
+<meta name="ICBM" content="18.6165, 73.7630">
+<meta property="og:site_name" content="Smart Technology">
+<meta property="og:url" content="https://avinash29asf.github.io/smarttechnology/services.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://avinash29asf.github.io/smarttechnology/technician-workbench.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Smart Technology | Laptop & Desktop Repair | Chip-Level Motherboard Repair">
+<meta name="twitter:description" content="Laptop, desktop, motherboard and chip-level repair in Thergaon, Pimpri-Chinchwad. Call 09923862098.">
+<meta name="twitter:image" content="https://avinash29asf.github.io/smarttechnology/technician-workbench.svg">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{
+  "@type": ["LocalBusiness", "ProfessionalService", "Organization"],
+  "@id": "https://avinash29asf.github.io/smarttechnology/#business",
+  "name": "Smart Technology",
+  "legalName": "Smart Technology",
+  "url": "https://avinash29asf.github.io/smarttechnology/",
+  "telephone": "+919923862098",
+  "image": "https://avinash29asf.github.io/smarttechnology/technician-workbench.svg",
+  "logo": "https://avinash29asf.github.io/smarttechnology/favicon.svg",
+  "priceRange": "Rs",
+  "description": "Smart Technology provides laptop repair, desktop repair, laptop and desktop motherboard repair, and chip-level repair services in Thergaon, Pimpri-Chinchwad, near Dange Chowk. Services include dead laptop repair, no-display repair, charging circuit repair, BIOS repair, motherboard troubleshooting and hardware upgrades.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd Floor, Office No 4, Vaishnavi Maharaja Hotel, Sai Complex, Dange Chowk Rd, near Bhoir Estate, Jai Hind Nagar, Thergaon",
+    "addressLocality": "Pimpri-Chinchwad",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411033",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.6165,
+    "longitude": 73.763
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "10:00",
+    "closes": "20:00"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Thergaon" },
+    { "@type": "Place", "name": "Dange Chowk" },
+    { "@type": "City", "name": "Pimpri-Chinchwad" },
+    { "@type": "Place", "name": "Wakad" },
+    { "@type": "Place", "name": "Tathawade" },
+    { "@type": "Place", "name": "Rahatani" },
+    { "@type": "Place", "name": "Pimple Saudagar" },
+    { "@type": "Place", "name": "Pimpri" },
+    { "@type": "Place", "name": "Chinchwad" },
+    { "@type": "City", "name": "Pune" }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#laptop-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#desktop-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#chip-level-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#laptop-motherboard-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#desktop-motherboard-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#bios-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#charging-circuit-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#power-circuit-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#no-display-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#dead-laptop-repair" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#ssd-upgrade" } },
+    { "@type": "Offer", "itemOffered": { "@id": "https://avinash29asf.github.io/smarttechnology/services.html#ram-upgrade" } }
+  ]
+},
+
+{
+  "@type": "WebSite",
+  "@id": "https://avinash29asf.github.io/smarttechnology/#website",
+  "url": "https://avinash29asf.github.io/smarttechnology/",
+  "name": "Smart Technology",
+  "description": "Laptop & Desktop Repair | Chip-Level Motherboard Repair in Thergaon, Pimpri-Chinchwad",
+  "publisher": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "inLanguage": "en-IN"
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#laptop-repair",
+  "name": "Laptop Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#laptop-repair",
+  "serviceType": "Laptop Repair",
+  "description": "Complete laptop repair for all brands covering dead laptop, no display, power, charging, keyboard, battery, hinge, overheating, boot and performance issues.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#desktop-repair",
+  "name": "Desktop Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#desktop-repair",
+  "serviceType": "Desktop Repair",
+  "description": "Desktop and PC workstation repair for home and office systems, including dead desktop, power supply, no display, motherboard, RAM and boot problems.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#laptop-motherboard-repair",
+  "name": "Laptop Motherboard Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#laptop-motherboard-repair",
+  "serviceType": "Laptop Motherboard Repair",
+  "description": "Laptop motherboard circuit repair for no power, dead motherboard, no display circuit, charging and power section faults.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#desktop-motherboard-repair",
+  "name": "Desktop Motherboard Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#desktop-motherboard-repair",
+  "serviceType": "Desktop Motherboard Repair",
+  "description": "Desktop motherboard repair covering no power, dead motherboard, RAM and boot circuit faults.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#chip-level-repair",
+  "name": "Chip-Level Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#chip-level-repair",
+  "serviceType": "Chip-Level Repair",
+  "description": "Micro-soldering and component-level repair of motherboards including IC replacement, MOSFETs, charging circuits and short circuit diagnosis.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#bios-repair",
+  "name": "BIOS Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#bios-repair",
+  "serviceType": "BIOS Repair",
+  "description": "BIOS IC programming, BIOS repair and corrupted BIOS recovery for laptops and desktops that fail to boot, restart or display properly.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#charging-circuit-repair",
+  "name": "Charging Circuit Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#charging-circuit-repair",
+  "serviceType": "Charging Circuit Repair",
+  "description": "Charging jack / DC jack, charging circuit and power IC repair so your laptop powers on and charges reliably.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#power-circuit-repair",
+  "name": "Power Circuit Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#power-circuit-repair",
+  "serviceType": "Power Circuit Repair",
+  "description": "Power section circuit repair on the motherboard for devices that power off, fail to start or have unstable power.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#no-display-repair",
+  "name": "No Display Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#no-display-repair",
+  "serviceType": "No Display Repair",
+  "description": "Diagnosis and repair of no-display faults in laptops and desktops, from display panels and cables to GPU, backlight and motherboard circuits.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#dead-laptop-repair",
+  "name": "Dead Laptop Repair",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#dead-laptop-repair",
+  "serviceType": "Dead Laptop Repair",
+  "description": "Repair of completely dead laptops caused by power, charging, DC jack, battery or motherboard circuit failure.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#ssd-upgrade",
+  "name": "SSD Upgrade",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#ssd-upgrade",
+  "serviceType": "SSD Upgrade",
+  "description": "SSD upgrade and replacement for faster boot, quicker app loading and improved overall laptop and desktop performance.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+},
+{
+  "@type": "Service",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#ram-upgrade",
+  "name": "RAM Upgrade",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html#ram-upgrade",
+  "serviceType": "RAM Upgrade",
+  "description": "RAM upgrade and replacement to improve multitasking and overall system performance on compatible laptops and desktops.",
+  "provider": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "areaServed": [ { "@type":"City","name":"Thergaon" }, { "@type":"City","name":"Pimpri-Chinchwad" }, { "@type":"City","name":"Pune" } ]
+}
+,
+{
+  "@type": "WebPage",
+  "@id": "https://avinash29asf.github.io/smarttechnology/services.html#webpage",
+  "url": "https://avinash29asf.github.io/smarttechnology/services.html",
+  "name": "Repair Services | Smart Technology Laptop, Desktop, Chip-Level & Motherboard Repair",
+  "description": "Smart Technology repair services: laptop repair, desktop repair, chip-level repair, laptop and desktop motherboard repair, BIOS repair, charging circuit repair, no display repair, dead laptop repair and SSD & RAM upgrades.",
+  "isPartOf": { "@id": "https://avinash29asf.github.io/smarttechnology/#website" },
+  "about": { "@id": "https://avinash29asf.github.io/smarttechnology/#business" },
+  "inLanguage": "en-IN"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinash29asf.github.io/smarttechnology/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://avinash29asf.github.io/smarttechnology/services.html" }
+  ]
+}
+
+]}
+</script>
 </head>
 <body>
 
@@ -1880,7 +2207,68 @@ select {
         </div>
       </div>
     </section>
-  <!-- ======================= CHIP-LEVEL BAND ======================= -->
+  <section class="section alt" id="learn">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Understand the Repair</span>
+          <h2>How Laptop &amp; Motherboard Repair Works</h2>
+          <p>A clear look at what these repairs involve, why problems happen, and how to decide between repair and replacement.</p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">What is chip-level laptop repair? <span class="faq-icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Chip-level repair means repairing the motherboard at component level rather than replacing the whole board. A technician replaces ICs, MOSFETs, capacitors and resistors, and repairs charging, power, display and BIOS circuits that sit directly on the motherboard. It is precision micro-soldering work that can recover a device that a board-level shop would say is beyond repair.
+            </div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">What causes a laptop to become completely dead? <span class="faq-icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-inner">
+              A laptop with no sign of power is usually linked to a power or charging fault. Common causes include a worn or broken DC/charging jack, a dead or shorted battery, a failed power or charging IC on the motherboard, a blown fuse or MOSFET in the power section, or a short circuit. A circuit-level diagnosis finds which part is at fault before any repair is quoted.
+            </div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">Why do laptop charging problems happen? <span class="faq-icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Charging faults are often caused by a loose or damaged charging jack, a faulty charger tip or cable, a failing battery, or damage to the charging circuit and power IC on the motherboard. We test the adapter, the DC jack, the battery and the motherboard charging section to confirm the true cause instead of guessing.
+            </div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">When is motherboard repair possible? <span class="faq-icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Many motherboard faults can be repaired at component level, including no-power, no-display, charging, BIOS and short-circuit faults. Repair may not be practical when there is deep physical damage such as a cracked board or burnt pads. We always diagnose first and give an honest recommendation on whether repair or replacement makes more sense for your device and budget.
+            </div></div>
+          </div>
+        </div>
+
+        <h3 class="choose-compare">Laptop Repair vs. Replacement</h3>
+        <p>If a laptop has a single repairable fault such as a dead battery, charging jack, screen, keyboard or a motherboard circuit issue, repair is usually much cheaper than buying a new machine and keeps your existing data and hardware. Replacement makes more sense when the device is very old, severely physically damaged, or the cost of multiple repairs approaches the price of a new laptop. A diagnosis tells you which path is more economical.</p>
+
+        <h3 class="choose-compare">Motherboard Repair vs. Replacement</h3>
+        <p>Repairing a motherboard at component level is often a fraction of the cost of a replacement motherboard, and many boards that appear dead can be recovered. Replacing the motherboard should be considered when the board has deep physical damage or when a replacement part is cheaper than the repair labour. We evaluate the fault and cost on a case-by-case basis.</p>
+
+        <h3 class="choose-compare">SSD vs. HDD Upgrade</h3>
+        <p>For an older laptop or desktop, moving from a hard disk (HDD) to a solid-state drive (SSD) usually gives the biggest visible speed improvement, with much faster boot and app loading. Adding RAM helps when multitasking slows the system. We check compatibility with your model before recommending the right upgrade.</p>
+
+        <div class="section-head reveal" style="margin-top:56px;">
+          <span class="eyebrow">Service Area</span>
+          <h2>Where We Serve</h2>
+          <p>Our workshop is in Thergaon near Dange Chowk, and we serve customers across Pimpri-Chinchwad and Pune.</p>
+        </div>
+        <div class="feature-strip">
+          <div class="strip-item"><h3>Thergaon</h3><p>Local workshop near Dange Chowk</p></div>
+          <div class="strip-item"><h3>Pimpri-Chinchwad</h3><p>Core service area</p></div>
+          <div class="strip-item"><h3>Wakad</h3><p>Nearby neighbourhood</p></div>
+          <div class="strip-item"><h3>Tathawade</h3><p>Nearby neighbourhood</p></div>
+          <div class="strip-item"><h3>Rahatani</h3><p>Nearby neighbourhood</p></div>
+          <div class="strip-item"><h3>Pimple Saudagar</h3><p>Nearby neighbourhood</p></div>
+          <div class="strip-item"><h3>Pimpri</h3><p>Nearby area</p></div>
+          <div class="strip-item"><h3>Pune</h3><p>Wider service area</p></div>
+        </div>
+      </div>
+    </section>
+<!-- ======================= CHIP-LEVEL BAND ======================= -->
     <section class="cta-band">
       <div class="container">
         <h2 class="reveal">Chip-Level Motherboard Repair &mdash; Our <span class="accent">Core Speciality</span></h2>

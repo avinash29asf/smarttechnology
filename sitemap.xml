@@ -1,41 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Smart Technology — sitemap.xml
-     Replace the placeholder host below with your live website URL. -->
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Smart Technology - sitemap.xml -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.smarttechnology.example.com/index.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://avinash29asf.github.io/smarttechnology/</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.smarttechnology.example.com/about.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.smarttechnology.example.com/services.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://avinash29asf.github.io/smarttechnology/index.html</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.smarttechnology.example.com/gallery.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://avinash29asf.github.io/smarttechnology/about.html</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.smarttechnology.example.com/faq.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://avinash29asf.github.io/smarttechnology/services.html</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.smarttechnology.example.com/contact.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://avinash29asf.github.io/smarttechnology/gallery.html</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avinash29asf.github.io/smarttechnology/faq.html</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avinash29asf.github.io/smarttechnology/contact.html</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
