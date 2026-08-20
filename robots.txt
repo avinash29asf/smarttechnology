@@ -12,6 +12,7 @@ Allow: /*.jpg
 Allow: /*.jpeg
 Allow: /*.webp
 
+Allow: /google*.html
 # Disallow admin or private areas if any
 Disallow: /private/
 Disallow: /admin/
@@ -27,4 +28,5 @@ User-agent: Googlebot
 Allow: /
 Allow: /*.html
 Allow: /*.css
+Allow: /google*.html
 Allow: /*.js
